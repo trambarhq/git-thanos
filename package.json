@@ -1,0 +1,21 @@
+{
+  "name": "git-thanos",
+  "version": "0.0.1",
+  "description": "Rebalance your open-source project with a snap of your finger",
+  "bin": "bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:trambarhq/git-thanos.git"
+  },
+  "author": "Chung Leong",
+  "license": "MIT",
+  "homepage": "https://github.com/trambarhq/git-thanos",
+  "dependencies": {
+    "command-line-args": "^4.0.7",
+    "command-line-usage": "^4.0.1",
+    "tmp": "0.0.33"
+  }
+}
