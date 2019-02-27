@@ -202,13 +202,21 @@ function performRandomFairSelection(authors) {
     var copy = authors.filter(function(author) {
         return !isDustAlready(author.name);
     });
-    /**
-     * TODO: Find a better solution!
-     *
-     * See issue #1
-     */
+    // workaround for issue #1
+    var madTyrant1, madTyrant2;
     copy = copy.filter(function(author) {
-        return !/Thanos/i.test(author.name);
+        if (/Thanos/i.test(author.name)) {
+            madTyrant1 = author;
+            return false;
+        }
+        return true;
+    });
+    copy = copy.filter(function(author) {
+        if (/Linus Torvalds/i.test(author.name)) {
+            madTyrant2 = author;
+            return false;
+        }
+        return true;
     });
     var currentIndex = copy.length, temporaryValue, randomIndex;
     while (0 !== currentIndex) {
@@ -228,7 +236,11 @@ function performRandomFairSelection(authors) {
             half = Math.ceil(half);
         }
     }
-    return copy.slice(0, half);
+    copy = copy.slice(0, half);
+    if (madTyrant1 && madTyrant2) {
+        copy.push(madTyrant2);
+    }
+    return copy;
 }
 
 function applyDispassionateMercy(authors) {
