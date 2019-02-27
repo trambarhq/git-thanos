@@ -205,7 +205,7 @@ function performRandomFairSelection(authors) {
     /**
      * TODO: Find a better solution!
      *
-     * See issue #2
+     * See issue #1
      */
     copy = copy.filter(function(author) {
         return !/Thanos/i.test(author.name);
