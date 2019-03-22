@@ -84,8 +84,8 @@ try {
         printVersion();
     } else {
         checkWorkingDirectory();
-        //checkHardwareSupport(options);
-        //checkHardwareLocations();
+        checkHardwareSupport(options);
+        checkHardwareLocations();
 
         var authors = getCommitAuthors();
         var authorsChosen = performRandomFairSelection(authors);

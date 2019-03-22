@@ -11,8 +11,21 @@
     "url": "git@github.com:trambarhq/git-thanos.git"
   },
   "author": "Chung Leong",
-  "license": "MIT",
   "homepage": "https://github.com/trambarhq/git-thanos",
+  "bugs": {
+    "url": "http://github.com/trambarhq/git-thanos/issues"
+  },
+  "license": "WTFPL",
+  "keywords": [
+    "git",
+    "balance",
+    "thanos",
+    "mercy"
+  ],
+  "tags": [
+    "git",
+    "mcu"
+  ],
   "dependencies": {
     "command-line-args": "^4.0.7",
     "command-line-usage": "^4.0.1",
