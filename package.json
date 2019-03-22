@@ -1,6 +1,6 @@
 {
   "name": "git-thanos",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Rebalance your open-source project with a snap of your finger",
   "bin": "bin/index.js",
   "scripts": {
